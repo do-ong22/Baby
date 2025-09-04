@@ -1,5 +1,8 @@
-// 글 데이터를 담을 배열
-let posts = [];
+// 글 데이터를 담을 배열 (미리 샘플 글 넣기)
+let posts = [
+  { title: "첫 번째 글", content: "이건 샘플로 미리 작성된 글입니다 😊" },
+  { title: "두 번째 글", content: "게시판 기능을 연습해보세요!" }
+];
 
 // 화면에 글 목록을 보여주는 함수
 function renderPosts() {
@@ -21,6 +24,7 @@ function renderPosts() {
   });
 }
 
+// 글 작성 내용 가져오기
 const form = document.querySelector('#postForm');
 
 form.addEventListener('submit', (e) => {
@@ -40,6 +44,7 @@ form.addEventListener('submit', (e) => {
   form.reset();
 });
 
+// 글 목록 삭제
 const postList = document.querySelector('#postList');
 
 postList.addEventListener('click', (e) => {
@@ -49,3 +54,6 @@ postList.addEventListener('click', (e) => {
     renderPosts(); // 화면 갱신
   }
 });
+
+// 페이지 처음 열릴 때 미리 렌더링
+renderPosts();
