@@ -1,2 +1,2 @@
 def message():
-    return "강남이가 수정했습니다."
+    return "Git 충돌을 유도해보겠습니다."
